@@ -37,7 +37,7 @@ namespace Airline_Hotel_Reservation
 
         public void SetDetails()
         {
-            bool continueEnteringDetails = true;
+            bool continueEnteringDetails = false;
 
             while (continueEnteringDetails)
             {
@@ -50,28 +50,28 @@ namespace Airline_Hotel_Reservation
                 char seatLetter = ' ';
 
                 // Get the row number from user
-                ReadRowNumber(ref row);
+                //ReadRowNumber(ref row);
 
-                // Get seat letter from user
-                ReadSeatLetter(ref seatLetterIndex, ref seatLetter);
+                //// Get seat letter from user
+                //ReadSeatLetter(ref seatLetterIndex, ref seatLetter);
 
 
-                CheckAvailability(ref row, ref seatLetterIndex, ref seatLetter);
+                //CheckAvailability(ref row, ref seatLetterIndex, ref seatLetter);
 
-                // Get occupant's name
-                ReadOccupantDetails(ref name, ref phoneNumber);
+                //// Get occupant's name
+                //ReadOccupantDetails(ref name, ref phoneNumber);
 
-                // Check if seat has been allocated already
+                //// Check if seat has been allocated already
 
-                this.rows[row].Seating[seatLetterIndex].SeatLetter = seatLetter;
-                this.rows[row].Seating[seatLetterIndex].Occupant.Name = name;
-                this.rows[row].Seating[seatLetterIndex].Occupant.PhoneNumber = phoneNumber;
+                //this.rows[row].Seating[seatLetterIndex].SeatLetter = seatLetter;
+                //this.rows[row].Seating[seatLetterIndex].Occupant.Name = name;
+                //this.rows[row].Seating[seatLetterIndex].Occupant.PhoneNumber = phoneNumber;
 
-                Console.WriteLine("Continue entering Details?");
-                if (Equals(Console.ReadLine(), "exit"))
-                {
-                    continueEnteringDetails = false;
-                }
+                //Console.WriteLine("Continue entering Details?");
+                //if (Equals(Console.ReadLine(), "exit"))
+                //{
+                //    continueEnteringDetails = false;
+                //}
             }
 
             // return to entry point to store data in JSON

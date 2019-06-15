@@ -63,10 +63,10 @@ namespace Airline_Hotel_Reservation.data
         }
 
         // TODO - Store Assigned Seats
-        public void StoreObjectToJson(ref IEnumerable<Models.Seat> seats)
+        public void StoreObjectToJson(ref IEnumerable<Models.Seat> seats, string writePath)
         {
             Console.WriteLine("Storing variables for airline reservation");
-            string writePath = "C:\\Users\\JM123\\source\\repos\\Airline_Hotel_Reservation\\data\\airline.json";
+            //writePath = "C:\\Users\\JM123\\source\\repos\\Airline_Hotel_Reservation\\data\\airline.json";
 
             File.WriteAllText(@writePath, JsonConvert.SerializeObject(seats));
 
@@ -78,5 +78,6 @@ namespace Airline_Hotel_Reservation.data
             // TODO - Encrypt Json
 
         }
+
     }
 }
